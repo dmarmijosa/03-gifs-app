@@ -10,7 +10,6 @@ import { GifsService } from '@service/gifs.service';
 export class SidebarComponent {
   private gifService =  inject(GifsService);
   get tags(){
-    console.log(this.gifService.tagsHistory);
     return this.gifService.tagsHistory;
   }
   getGifs(name:string){

@@ -1,7 +1,9 @@
 <div class="bg-dark border-right p-3" id="sidebar">
     <h3 class="text-white border-bottom pb-3">Gifs App</h3>
     <div class="list-group list-reset">
-        <button *ngFor="let tag of tags" (click)="getGifs(tag)" class="list-group-item list-group-item-action">{{tag |
-            titlecase}}</button>
+        @for (tag of tags; track $index) {
+            <button (click)="getGifs(tag)" class="list-group-item list-group-item-action">{{tag | titlecase}}</button>
+
+        }
     </div>
 </div>

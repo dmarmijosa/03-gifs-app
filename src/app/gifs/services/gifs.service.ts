@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { environment } from '@environments/environment';
+import { environment } from '@environments/environment.development';
 import { Gif, SearchResponse } from '@interfaces/gifs.interface';
 
 @Injectable({
@@ -8,6 +8,7 @@ import { Gif, SearchResponse } from '@interfaces/gifs.interface';
 })
 export class GifsService {
   private _tagsHistorys: string[] = [];
+
   private aPi_key = environment.api_key;
   private ServiceURL = environment.serviceUrl;
   private http = inject(HttpClient);
