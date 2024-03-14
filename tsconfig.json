@@ -22,7 +22,13 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@service/*":["./src/app/gifs/services/*"],
+      "@pages/*":["./src/app/gifs/pages/*"],
+      "@interfaces/*":["./src/app/gifs/interfaces/*"],
+      "@environments/*":["./src/environments/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
